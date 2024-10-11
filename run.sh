@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-pdflatex kev.tex
-xdg-open kev.pdf
+pdflatex ayuub.tex
+xdg-open ayuub.pdf

@@ -1,0 +1,188 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+% \usepackage[a4paper, top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textbf{\textit{\small #3}} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}] \setlength{\itemsep}{-5pt}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeSubHeadingWorkListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingWorkListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \vspace*{-0.3in}
+    {\Huge \scshape Ayuub Mohamud} \\ \vspace{3pt}
+    \small \raisebox{-0.1\height}\faMapMarker\ Cambridge ~
+    \href{tel:+447554284604}{\raisebox{-0.2\height}\faPhone\  \underline{+44 7554 284604}} ~
+    \href{mailto:ayuub.mohamud@outlook.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{ayuub.mohamud@outlook.com}} \\
+    \vspace{1pt}
+    \href{https://www.linkedin.com/in/ayuub-mohamud-405947331/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/ayuub-mohamud-405947331}} ~
+    \href{https://github.com/AyuubMohamud}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/AyuubMohamud}}
+    \vspace{-8pt}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Imperial College London}{Oct 2023 -- Jun 2027}
+{MEng Electronic and Information Engineering}{}
+\resumeItemListStart
+\resumeItem{Currently in 2nd Year}
+\resumeItem{\textbf{Modules:} Digital Electronics and Computer Architecture \textbf{(79.8\%)}, Programming for Engineers \textbf{(72.15\%)}, Engineering Project \textbf{(70.62\%)} }
+\resumeItemListEnd
+\vspace{3mm} %5mm vertical space
+\resumeSubheading
+{Harris Clapham Sixth Form}{Sep 2021 - Jun 2023}
+{A Levels}{London, UK}
+\resumeItemListStart
+\resumeItem{\textbf{Grades: A*AAA }in Mathematics, Further Mathematics, Physics and Computer Science.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+
+\resumeSubHeadingListStart
+
+\resumeProjectHeading {\textbf{Out of Order RISC-V Implementation} \href{https://github.com/AyuubMohamud/Biriq}{\scalebox{0.75}\faLink} $|$  Verilog} {May 2024}
+\resumeItemListStart
+\resumeItem{Built a 2-way \textbf{configurable, superscalar, speculative, out-of-order} RISC-V CPU.}
+\resumeItem{Implemented bimodal\textbf{ branch prediction}, machine and user mode.}
+\resumeItem{Executes \textbf{over 140 instructions}, including a \textbf{custom DSP extension}.}
+\resumeItem{\textbf{Re-orders} cache requests to allow for more \textbf{optimal} cache utilisation.}
+\resumeItem{Implemented a\textbf{ dedicated test suite} \href{https://github.com/AyuubMohamud/biriqTests}{\scalebox{0.75}\faLink}  in \textbf{make} and \textbf{bash} for finding microarchitectural bugs.}
+\resumeItem{Utilised\textbf{ Verilator} and \textbf{GTKWave} extensively to simulate and verify design, alongside \textbf{on FPGA testing}.}
+\resumeItem{Runs on a low-speed grade FPGA at \textbf{82.5MHZ} whilst taking \textbf{\~10K LUTs}, \textbf{10/240} of the available DSPs and \textbf{4/135} available Block RAMs.}
+\resumeItemListEnd
+
+\resumeProjectHeading{\textbf{1st Year Engineering Project}}{May-Jun 2024}
+\resumeItemListStart
+\resumeItem{Worked in a \textbf{team of 6} to develop a rover that identifies objects in an arena using various sensors.}
+\resumeItem{Delivered an ultrasound demodulation circuit, selecting necessary parts to \textbf{decode UART signals}.}
+\resumeItem{In charge of managing the team's finances, ordering parts and discussing them with team members.}
+\resumeItem{Collaborated with team members to help \textbf{develop} the rover firmware and radio demodulation circuit.}
+\resumeItem{Achieved \textbf{70.62\%} for this project (First Class).}
+\resumeItemListEnd
+
+\resumeProjectHeading{\textbf{TileLink-based SOC infrastructure } \href{https://github.com/AyuubMohamud/TileLinkIP}{\scalebox{0.75}\faLink} $|$ Verilog }{Nov 2023}
+\resumeItemListStart
+\resumeItem{Built a library of \textbf{configurable reusable modules}, for building \textbf{embedded SOCs} for FPGAs.}
+\resumeItem{GPIO controller allows for I/O pins to be \textbf{configured} as inputs or outputs at runtime.}
+\resumeItem{Block RAM controllers allow for burst accesses \textbf{maximising} bus bandwidth, including \textbf{atomics}.}
+\resumeItem{Contains \textbf{crossbars, GPIO controller, DMA controller and more} allowing for extensible SOCs.}
+\resumeItemListEnd
+
+\resumeProjectHeading{\textbf{ARMv8-A C Compiler }$|$ Verilog }{Nov 2023}
+\resumeItemListStart
+\resumeItem{Built a compiler for a \textbf{subset of C in C++} targeting the \textbf{ARMv8-A} architecture.}
+\resumeItem{Hand-wrote the lexer and \textbf{recursive descent C parser}.}
+\resumeItem{\textbf{Optimises} multiplications and divisions into bit shifts, by checking if the multiplier/divisor is a power of two, and \textbf{reordering code} to achieve this.}
+\resumeItem{Performs \textbf{semantic analysis} on given C code.}
+\resumeItem{Generates\textbf{ working assembly }that can interact with standard C library.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+%-----------WORK EXPERIENCE-----------
+\section{Work Experience}
+\resumeSubHeadingWorkListStart
+\resumeSubheading
+{Undergraduate Teaching Assistant}{Oct 2024 -}
+{Imperial College London (Department of Electrical and Electronic Engineering)}{}
+\resumeItemListStart
+\resumeItem{Helping students learn modern C++ through live feedback during programming sessions.}
+\resumeItem{Supporting students new to programming develop critical skills like abstraction, decomposition and more.}
+\resumeItemListEnd
+\resumeSubHeadingWorkListEnd
+
+
+%-----------SKILLS AND AWARDS-----------
+\section{Skills and Awards}
+
+% Technical Skills subsection
+\subsection*{\normalsize Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    \textbf{Programming Languages}{: C, C++, Python, ARMv8 Assembly, RISC-V Assembly} \\
+    \textbf{Hardware Description Languages}{: SystemVerilog, Verilog} \\
+    \textbf{Toolchain}{: GCC, Git, Verilator, GTKWave, Vivado, Make, Bash, Linux, Clang} \\
+    }}
+\end{itemize}
+
+
+\end{document}
