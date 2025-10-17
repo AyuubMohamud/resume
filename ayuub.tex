@@ -59,7 +59,7 @@
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & \textbf{\small #2} \\
       \textbf{\textit{\small #3}} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-9pt}
 }
 
 
@@ -67,15 +67,15 @@
     \item
     \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & \textbf{\small #2}\\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-8pt}
 }
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}] \setlength{\itemsep}{-5pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}] \setlength{\itemsep}{-7pt}}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeSubHeadingWorkListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingWorkListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-8pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -86,14 +86,11 @@
 \begin{center}
     \vspace*{-0.3in}
     {\Huge \scshape Ayuub Mohamud} \\ \vspace{3pt}
-    \small \raisebox{-0.1\height}\faMapMarker\ London ~
-    \href{tel:+447554284604}{\raisebox{-0.2\height}\faPhone\  \underline{+44 7554 284604}} ~
-    \href{mailto:ayuub.mohamud@outlook.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{ayuub.mohamud@outlook.com}} \\
-    \vspace{1pt}
     \href{https://www.linkedin.com/in/ayuub-mohamud-405947331/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/ayuub-mohamud-405947331}} ~
     \href{https://github.com/AyuubMohamud}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/AyuubMohamud}}
     \vspace{-8pt}
 \end{center}
+
 
 %-----------EDUCATION-----------
 \section{Education}
@@ -102,10 +99,10 @@
 {Imperial College London}{Oct 2023 -- Jun 2027}
 {MEng Electronic and Information Engineering}{}
 \resumeItemListStart
-\resumeItem{Currently in 2nd Year}
-\resumeItem{\textbf{Modules:} Digital Electronics and Computer Architecture \textbf{(79.78\%)}, Programming for Engineers \textbf{(72.15\%)}, Engineering Project \textbf{(70.62\%)} }
+\resumeItem{Currently in 3rd Year}
+\resumeItem{\textbf{Modules:} Digital Electronics and Computer Architecture \textbf{(79.78\%)}, Instruction Architectures and Compilers \textbf{(78.74\%)} }
 \resumeItemListEnd
-\vspace{3mm} %5mm vertical space
+\vspace{4mm} %5mm vertical space
 \resumeSubheading
 {Harris Clapham Sixth Form}{Sep 2021 - Jun 2023}
 {A Levels}{}
@@ -113,72 +110,73 @@
 \resumeItem{\textbf{Grades: A*AAA }in Mathematics, Further Mathematics, Physics and Computer Science.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
+%-----------WORK EXPERIENCE-----------
+\section{Work Experience}
+\resumeSubHeadingWorkListStart
+\resumeSubheading
+{Arm Holdings plc}{Jun 2025 - Sep 2025}
+{Hardware Engineering Intern}{Cambridge}
+\resumeItemListStart
+\resumeItem{Worked in the little A-core memory system design team.}
+\resumeItem{\textbf{Designed} and \textbf{delivered} a testbench infrastructure to \textbf{correlate prefetcher's with software models}.}
+\resumeItem{\textbf{Collaborated} with modelling and design teams to understand prefetcher architecture, debug issues, and \textbf{shape training data requirements}.}
+\resumeItem{\textbf{Raised and addressed} several issues, \textbf{collaborating} across multiple teams to resolve and improve prefetcher correlation.}
+\resumeItemListEnd
+\resumeSubheading
+{Imperial College London}{Oct 2024 - Mar 2025}
+{Undergraduate Teaching Assistant}{Department of Electrical and Electronic Engineering, London}
+\resumeItemListStart
+\resumeItem{Provided live feedback \textbf{and demonstrations} during programming sessions, helping students grasp modern C++ concepts such as memory management and object-oriented design.}
+\resumeItem{Supported first-year students new to programming, strengthening skills in \textbf{abstraction}, \textbf{decomposition}, and problem-solving.}
+\resumeItemListEnd
+\resumeSubHeadingWorkListEnd
 
 %-----------PROJECTS-----------
 \section{Projects}
 
 \resumeSubHeadingListStart
 
-\resumeProjectHeading {\textbf{Out of Order RISC-V Implementation} \href{https://github.com/AyuubMohamud/Biriq}{\scalebox{0.75}\faLink} $|$ SystemVerilog, C++, Hardware} {May 2024-Oct 2024}
+\resumeProjectHeading {\textbf{Out of Order RISC-V Implementation} \href{https://github.com/AyuubMohamud/Biriq}{\scalebox{0.75}\faLink} $|$ SystemVerilog, C++, Hardware} {May 2024 - Apr 2025}
 \resumeItemListStart
 \resumeItem{Built a 2-way \textbf{configurable, superscalar, speculative, out-of-order} RISC-V CPU.}
-\resumeItem{Implemented bimodal\textbf{ branch prediction}, machine and user mode.}
-\resumeItem{Can execute \textbf{over 140 instructions}, including a \textbf{custom DSP extension}.}
-\resumeItem{\textbf{Re-orders} cache requests to allow for more \textbf{optimal} cache utilisation.}
-\resumeItem{Implemented a\textbf{ dedicated test suite} \href{https://github.com/AyuubMohamud/biriqTests}{\scalebox{0.75}\faLink}  in \textbf{make, bash and C++} for finding microarchitectural bugs.}
-\resumeItem{Utilised\textbf{ Verilator} and \textbf{GTKWave} extensively to simulate and verify design, alongside \textbf{on FPGA testing}.}
-\resumeItem{Runs on a low-speed grade FPGA at \textbf{82.5MHZ} whilst taking \textbf{around 10K LUTs}, \textbf{10/240} of the available DSPs and \textbf{4/135} available Block RAMs.}
+\resumeItem{Implemented bimodal \textbf{branch prediction}, bit-manipulation instructions, \textbf{writeback non-blocking cache}.}
+\resumeItem{Designed and tested a \textbf{Memory Protection Unit} for address protection using physical addresses. }
+\resumeItem{Implemented a \textbf{dedicated test suite} \href{https://github.com/AyuubMohamud/biriqTests}{\scalebox{0.75}\faLink}  in \textbf{make, bash and C++} for finding microarchitectural bugs.}
+\resumeItem{Runs on a low-speed grade FPGA at \textbf{82.5MHZ} whilst taking \textbf{around 9K LUTs} and \textbf{4/240} of available DSPs.}
 \resumeItemListEnd
 
-\resumeProjectHeading{\textbf{EEERover: 1st Year Engineering Project} $|$ C++, Software/Hardware}{May-Jun 2024}
+\resumeProjectHeading{\textbf{Custom mathematical accelerator} \href{https://github.com/AyuubMohamud/MathematicalAccelerator}{\scalebox{0.75}\faLink} $|$ SystemVerilog, C++, Software/Hardware}{May 2025 - Jun 2025}
 \resumeItemListStart
-\resumeItem{Worked in a \textbf{team of 6} to develop a rover that identifies objects in an arena using various sensors.}
-\resumeItem{Delivered an ultrasound demodulation circuit, selecting necessary parts to \textbf{decode UART signals}.}
-\resumeItem{\textbf{Managed} the team's finances, ordering parts and discussing them with team members.}
-\resumeItem{Collaborated with team members to help \textbf{develop} the rover firmware and radio demodulation circuit.}
-\resumeItem{Achieved \textbf{70.62\%} for this project \textbf{(First Class)}.}
+\resumeItem{Designed a \textbf{parallel fixed-point accelerator} with \textbf{multi-threaded cores, pipelined arithmetic}, and \textbf{real-time streaming output} for fractal rendering.}
+\resumeItem{Implemented a \textbf{custom instruction set, task scheduling}, and \textbf{arbitration logic} to coordinate eight compute cores for \textbf{maximum throughput}.}
+\resumeItem{Achieved \textbf{2x} the peak throughput of a single threaded program using \textbf{-O3} on a modern CPU, while consuming \textbf{30000} LUTs, utilising \textbf{Verilator} for \textbf{functional verification} before \textbf{FPGA deployment}.}
 \resumeItemListEnd
 
-\resumeProjectHeading{\textbf{TileLink-based SOC infrastructure} \href{https://github.com/AyuubMohamud/TileLinkIP}{\scalebox{0.75}\faLink} $|$ SystemVerilog, Hardware }{Nov 2023}
+\resumeProjectHeading{\textbf{TileLink IPs} \href{https://github.com/AyuubMohamud/TileLinkIP}{\scalebox{0.75}\faLink} $|$ SystemVerilog, Hardware} {Nov 2023 - Oct 2024}
 \resumeItemListStart
-\resumeItem{Built a library of \textbf{configurable reusable modules}, for building \textbf{embedded SOCs} for FPGAs.}
-\resumeItem{GPIO controller allows for I/O pins to be \textbf{configured} as inputs or outputs at runtime.}
+\resumeItem{Built a library of \textbf{configurable reusable IPs}, for building \textbf{embedded SOCs} on FPGAs.}
 \resumeItem{Block RAM controllers allow for burst accesses \textbf{maximising} bus bandwidth, including \textbf{atomics}.}
-\resumeItem{Learned about \textbf{GPIO, SPI, Bus Infrastructure, Burst accesses, DMA, tri-state buffers}.}
+\resumeItem{\textbf{Arbiters, decoders} and N-M connections for \textbf{flexible interconnects} across multiple IPs.}
+\resumeItem{\textbf{PLIC} and \textbf{CLINT} controllers for \textbf{interrupt delivery and timer management}, alongside a \textbf{flexible UART controller} for \textbf{external} communication.}
 \resumeItemListEnd
 
-\resumeProjectHeading{\textbf{ARMv8-A C Compiler } \href{https://github.com/AyuubMohamud/sfce}{\scalebox{0.75}\faLink} $|$ C++, Software }{Apr-Jun 2023}
+\resumeProjectHeading{\textbf{EEERover: 1st Year Engineering Project} $|$ C++, Software/Hardware}{May 2024 - Jun 2024}
 \resumeItemListStart
-\resumeItem{Built a compiler for a \textbf{subset of C in C++} targeting the \textbf{ARMv8-A} architecture.}
-\resumeItem{Hand-wrote the lexer and the \textbf{recursive descent C parser}, learning how \textbf{compilers translate code}.}
-\resumeItem{\textbf{Optimises} multiplications and divisions into bit shifts, by checking if the multiplier/divisor is a power of two, and \textbf{reordering code} to achieve this.}
-\resumeItem{Performs \textbf{semantic analysis} on given C code.}
-\resumeItem{Generates\textbf{ working assembly }that can interact with standard C library.}
+\resumeItem{\textbf{Collaborated} in a team of 6 to develop a rover capable of object detection via multiple sensors.}
+\resumeItem{\textbf{Designed} an ultrasound demodulation circuit to decode UART signals.}
+\resumeItem{\textbf{Managed} team finances and component sourcing; project awarded a First Class grade.}
 \resumeItemListEnd
+
 \resumeSubHeadingListEnd
-
-
-%-----------WORK EXPERIENCE-----------
-\section{Work Experience}
-\resumeSubHeadingWorkListStart
-\resumeSubheading
-{Undergraduate Teaching Assistant}{Oct 2024 - Present}
-{Imperial College London (Department of Electrical and Electronic Engineering)}{}
-\resumeItemListStart
-\resumeItem{Helping students learn modern C++ through live feedback during programming sessions.}
-\resumeItem{Supporting students new to programming develop critical skills like abstraction, decomposition and more.}
-\resumeItemListEnd
-\resumeSubHeadingWorkListEnd
-
 
 %-----------SKILLS AND AWARDS-----------
 \section{Skills}
 
-\begin{itemize}[leftmargin=0.15in, label={}]
+\begin{itemize}[leftmargin=0.15in, label={}] 
     \small{\item{
-    \textbf{Programming Languages}{: C, C++, Python, ARMv8 Assembly, RISC-V Assembly} \\
     \textbf{Hardware Description Languages}{: SystemVerilog, Verilog} \\
-    \textbf{Toolchain}{: GCC, Git, Verilator, GTKWave, Vivado, Make, Bash, Linux, Clang} \\
+    \textbf{EDA Tools}{: Synopsys VCS, Synopsys Verdi} \\
+    \textbf{Programming Languages}{: C, C++, Python, ARMv8 Assembly, RISC-V Assembly} \\
     \textbf{Protocols}{: TileLink, AXI}
     }}
 
